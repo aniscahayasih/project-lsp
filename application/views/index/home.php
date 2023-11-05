@@ -84,7 +84,7 @@ http://www.tooplate.com/view/2098-health
                          <li><a href="#about" class="smoothScroll">Tentang Kami</a></li>
                          <li><a href="#appointment" class="smoothScroll">Pendaftaran</a></li>
                          <li><a href="#saran" class="smoothScroll">Kritik dan Saran</a></li>
-                         <li class="appointment-btn"><a href="login.php">Login</a></li>
+                         <li class="appointment-btn"><a href="<?php echo base_url()?>auth/login">Login</a></li>
                     </ul>
                </div>
 
