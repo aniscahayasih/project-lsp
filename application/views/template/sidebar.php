@@ -10,13 +10,13 @@
                         <a href="./"><i class="menu-icon fa fa-home"></i>Beranda </a>
                     </li>
                     <li>
-                        <a href="index.php?p=pendaftaran"> <i class="menu-icon ti-clipboard"></i>Pendaftaran </a>
+                        <a href="<?php echo base_url()?>admin/pendaftaran"> <i class="menu-icon ti-clipboard"></i>Pendaftaran </a>
                     </li>
                     <li>
-                        <a href="index.php?p=transaksi"> <i class="menu-icon ti-receipt"></i>Transaksi </a>
+                        <a href="<?php echo base_url()?>admin/transaksi"> <i class="menu-icon ti-receipt"></i>Transaksi </a>
                     </li>
                     <li>
-                        <a href="index.php?p=customer"> <i class="menu-icon ti-id-badge"></i>Customer </a>
+                        <a href="<?php echo base_url()?>admin/customer"> <i class="menu-icon ti-id-badge"></i>Customer </a>
                     </li>
                     <li>
                         <a href="index.php?p=laporan"> <i class="menu-icon ti-printer"></i>Laporan </a>
@@ -36,7 +36,7 @@
                     </li>
 
                     <li>
-                        <a href="index.php?p=saran"> <i class="menu-icon ti-list"></i>Kritik dan Saran </a>
+                        <a href="<?php echo base_url()?>admin/saran""> <i class="menu-icon ti-list"></i>Kritik dan Saran </a>
                     </li>
 
                 </ul>

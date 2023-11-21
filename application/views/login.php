@@ -15,11 +15,10 @@
 				<span style="color:rgba(255,255,255,.4);">Login Admin</span>
 				<h1 style="font-size:32pt;letter-spacing:-3px;"><span style="color:#a5c422
 "> Hugo </span> Car Wash</h1>
-<br><center><p>Repost by <a href='https://stokcoding.com/' title='StokCoding.com' target='_blank'>StokCoding.com</a></p></center>
 
 			</div>
 			<div class="form">
-				<form action="proses_login.php" method="post">
+				<form action="<?php echo base_url()?>auth/auth" method="post">
 					<div class="form-group">
 						<span class="form-icon"><i class="fa fa-user"></i></span>
 						<input type="text" class="form-input" placeholder="username" name="username" autofocus="">
