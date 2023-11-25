@@ -1,6 +1,6 @@
 <?php 
 defined('BASEPATH') or exit('No direct script access allowed');
-class UserModels extends CI_Model
+class TipeMobilModels extends CI_Model
 {
     public function insert($table, $data)
 	{
@@ -10,19 +10,19 @@ class UserModels extends CI_Model
 
     public function update($table, $data, $id)
 	{
-		$result = $this->db->where('id_user', $id)->update($table, $data);
+		$result = $this->db->where('id_type_mobil', $id)->update($table, $data);
 		return $result;
 	}
 
 	public function delete($table, $id)
 	{
-		$result = $this->db->delete($table, ['id_user' => $id]);
+		$result = $this->db->delete($table, ['id_type_mobil' => $id]);
 		return $result;
 	}
 
 	public function find_record_by_id($table, $id)
 	{
-		$result = $this->db->get_where($table, ['id_user' => $id])->row();
+		$result = $this->db->get_where($table, ['id_type_mobil' => $id])->row();
 		return $result;
 	}
 }

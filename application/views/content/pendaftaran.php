@@ -59,8 +59,7 @@
                                             <td><?php echo $data->total_biaya;?></td>
                                             
                                             <td>
-                                                <form action="<?php echo base_url('admin/ganti_status'); ?>" method="POST">
-                                                    <input type="hidden" name="id_pendaftaran" value="<?php echo $data->id_pendaftaran ?>">
+                                                <form action="<?php echo base_url('admin/ganti_status/'. $data->id_pendaftaran); ?>" method="POST">
                                                     <?php
                                                         if($data->status =='Lunas'){
                                                     ?>
@@ -75,7 +74,7 @@
                                                 </form>
                                             </td>
                                             <td align="center">
-                                                <a href="index.php?p=tambah_pembayaran&id_pendaftaran=" class="btn btn-success mb-3"> <i class="fa fa-fw fa-dollar" style="color: white"></i> <font color="white">Bayar</font>
+                                                <a href="<?= base_url('admin/bayar_view/' . $data->id_pendaftaran) ?>" class="btn btn-success mb-3"> <i class="fa fa-fw fa-dollar" style="color: white"></i> <font color="white">Bayar</font>
                                                 </a>
                                             </td>
                                         </tr>

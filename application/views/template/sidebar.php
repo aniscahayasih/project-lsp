@@ -24,19 +24,19 @@
 
                     <li class="menu-title">Extra</li><!-- /.menu-title -->
                     <li>
-                        <a href="index.php?p=user"> <i class="menu-icon ti-user"></i>User </a>
+                        <a href="<?php echo base_url()?>admin/user"> <i class="menu-icon ti-user"></i>User </a>
                     </li>
 
                     <li>
-                        <a href="index.php?p=type_mobil"> <i class="menu-icon ti-list"></i>Type Mobil </a>
+                        <a href="<?php echo base_url()?>admin/type_mobil"> <i class="menu-icon ti-list"></i>Type Mobil </a>
                     </li>
 
                     <li>
-                        <a href="index.php?p=jenis_cucian"> <i class="menu-icon ti-list"></i>Jenis Cucian </a>
+                        <a href="<?php echo base_url()?>admin/jenis_cucian"> <i class="menu-icon ti-list"></i>Jenis Cucian </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo base_url()?>admin/saran""> <i class="menu-icon ti-list"></i>Kritik dan Saran </a>
+                        <a href="<?php echo base_url()?>admin/saran"> <i class="menu-icon ti-list"></i>Kritik dan Saran </a>
                     </li>
 
                 </ul>
