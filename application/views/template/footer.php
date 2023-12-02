@@ -1,16 +1,5 @@
 <div class="clearfix"></div>
 
-        <footer class="site-footer">
-            <div class="footer-inner bg-white">
-                <div class="row">
-                    <div class="col-sm-6">
-                        Copyright &copy; 2020 <a href="www.kampus-programmer.com/"><b> Kampus Programmer</b> | Repost by <a href='https://stokcoding.com/' title='StokCoding.com' target='_blank'>StokCoding.com</a>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
     </div><!-- /#right-panel -->
 
     <!-- Right Panel -->

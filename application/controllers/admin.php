@@ -103,12 +103,38 @@ class Admin extends CI_Controller
   public function bayar_view($id)
   {
     $data['data'] = $this->PendaftaranModels->find_record_by_id('pendaftaran', $id);
+    $no_nota_last = $this->TransaksiModels->find_last_no_nota('transaksi');
+    $data['no_nota'] = (int)$no_nota_last->no_nota + 1;
+
 
     $this->load->view("template/head", $data);
     $this->load->view("template/header", $data);
     $this->load->view("template/sidebar", $data);
     $this->load->view("content/tambah_pembayaran", $data);
     $this->load->view("template/footer", $data);
+  }
+
+  public function bayar_proses()
+  {
+    $data2['id_pendaftaran'] = $this->input->post('id_pendaftaran');
+		$data2['no_nota'] = $this->input->post('no_nota');
+    $data2['tanggal'] = $this->input->post('tanggal');
+    $data2['bayar'] = $this->input->post('bayar');
+    $data2['kembali'] = $this->input->post('kembali');
+    $data2['total'] = $this->input->post('total');
+    $data2['status'] = $this->input->post('status');
+    $data2['id_user'] = $this->input->post('id_user');
+    $data2['nama_pencuci'] = $this->input->post('nama_pencuci');
+
+    $this->TransaksiModels->insert('transaksi', $data2);
+
+    $id_pendaftaran = $this->input->post('id_pendaftaran');
+    $data['status'] = "Lunas";
+    
+    $this->PendaftaranModels->update('pendaftaran', $data, $id_pendaftaran);
+
+
+    redirect(base_url('admin/pendaftaran'));
   }
 
   //user
@@ -142,7 +168,7 @@ class Admin extends CI_Controller
     $data['hp'] = $this->input->post('hp');
     $data['status'] = 1;
     $data['username'] = $this->input->post('username');
-    $data['password'] = $this->input->post('password');
+    $data['password'] = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
 
     $this->UserModels->insert('user', $data);
 		$this->session->set_flashdata('message', '<div class="alert alert-success">Record has been saved successfully.</div>');
@@ -165,7 +191,7 @@ class Admin extends CI_Controller
 		$data['alamat'] = $this->input->post('alamat');
     $data['hp'] = $this->input->post('hp');
     $data['username'] = $this->input->post('username');
-    $data['password'] = $this->input->post('password');
+    $data['password'] = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
 
     $this->UserModels->update('user', $data, $id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success">Record has been saved successfully.</div>');

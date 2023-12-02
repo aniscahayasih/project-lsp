@@ -20,6 +20,44 @@ class Index extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('index/home');
+		$this->db->select('*');
+    $this->db->from('jenis_cucian');
+    $jenis_cuci = $this->db->get()->result();
+		$type_mobil = $this->db->select("*")->from('type_mobil')->get()->result();
+
+		$data["jenis_cuci"] = $jenis_cuci;
+		$data["type_mobil"] = $type_mobil;
+
+		$this->load->view('index/home', $data);
+	}
+
+	public function createKritik() 
+	{
+		$data['nama'] = $this->input->post('nama');
+		$data['email'] = $this->input->post('email');
+		$data['pesan'] = $this->input->post('pesan');
+    $data['kebersihan'] = $this->input->post('kebersihan');
+    $data['keramahan'] = $this->input->post('keramahan');
+		$data['ketelitian'] = $this->input->post('ketelitian');
+
+		$this->KritikModels->insert('saran', $data);
+
+		$this->session->set_flashdata('flash', 'Ditambahkan');
+
+		redirect(base_url('/'));
+	}	
+
+	public function createPendaftaran()
+	{
+		$data['nama'] = $this->input->post('nama');
+		$data['no_hp'] = $this->input->post('no_hp');
+		$data['alamat'] = $this->input->post('alamat');
+    $data['nomor_plat'] = $this->input->post('nomor_plat');
+    $data['tipe'] = $this->input->post('tipe');
+		$data['nomor_antrian'] = $this->input->post('no_antrian');
+		$data['jenis-cucian'] = $this->input->post('jenis-cucian');
+		$data['tgl_pendaftaran'] = $this->input->post('tgl_pendaftaran');
+		$data['jam_pendaftaran'] = $this->input->post('jam_pendaftaran');
+		$data['total_biaya'] = $this->input->post('total_biaya');
 	}
 }

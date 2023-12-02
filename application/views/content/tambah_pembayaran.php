@@ -33,12 +33,12 @@
 					</div>
 					<div class="card-body">
 
-						<form action="index.php?p=proses_pembayaran" method="post" enctype="multipart/form-data"
+						<form action="<?php echo base_url('admin/bayar_proses') ?>" method="post" enctype="multipart/form-data"
 							class="form-horizontal">
 							<input type="hidden" id="text-input" name="id_pendaftaran" class="form-control"
 								value="<?= $data->id_pendaftaran;?>">
-							<!-- <input type="hidden" id="text-input" name="id_user" class="form-control"
-								value="<?= $id_user;?>"> -->
+							<input type="hidden" id="text-input" name="id_user" class="form-control"
+								value="<?= $this->session->userdata('id') ?>">
 							<input type="hidden" id="text-input" name="status" class="form-control" value="Lunas">
 
 							<div class="row form-group">
@@ -84,6 +84,13 @@
 									<input type="text" id="text-input" name="jenis_cucian" placeholder="Text"
 										class="form-control" value="<?= $data->jenis_cucian;?>" readonly>
 								</div>
+							</div>
+
+							<div class="row form-group">
+									<div class="col col-md-3"><label for="email-input" class=" form-control-label">No. Nota</label></div>
+									<div class="col-12 col-md-9">
+									<input type="text" class="form-control" id="no_nota" value="<?= $no_nota ?>" name="no_nota" placeholder="No. Nota" readonly>
+									</div>
 							</div>
 
 			

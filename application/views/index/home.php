@@ -3,7 +3,7 @@
 
 <head>
 
-     <title>Hugo - Car Wash</title>
+     <title>GC - Car Wash</title>
      <!--
 
 Template 2098 Health
@@ -18,15 +18,15 @@ http://www.tooplate.com/view/2098-health
      <meta name="author" content="Tooplate">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/bootstrap.min.css">
-     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/font-awesome.min.css">
-     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/animate.css">
-     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/owl.carousel.css">
-     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/owl.theme.default.min.css">
+     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/bootstrap.min.css">
+     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/font-awesome.min.css">
+     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/animate.css">
+     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.carousel.css">
+     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.theme.default.min.css">
 
-     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url()?>assets/images/logo.png">
+     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url() ?>assets/images/logo.png">
      <!-- MAIN CSS -->
-     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/tooplate-style.css">
+     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/tooplate-style.css">
 
 </head>
 
@@ -48,7 +48,7 @@ http://www.tooplate.com/view/2098-health
                <div class="row">
 
                     <div class="col-md-4 col-sm-5">
-                         <p>Kinclongkan kendaraan anda bersama Hugo Car Wash</p>
+                         <p>Kinclongkan kendaraan anda bersama GC Car Wash</p>
                     </div>
 
                     <div class="col-md-8 col-sm-7 text-align-right">
@@ -74,7 +74,7 @@ http://www.tooplate.com/view/2098-health
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand"><i class="fa fa-h-square"></i>ugo - Car Wash</a>
+                    <a href="index.html" class="navbar-brand">GC - Car Wash</a>
                </div>
 
                <!-- MENU LINKS -->
@@ -84,7 +84,7 @@ http://www.tooplate.com/view/2098-health
                          <li><a href="#about" class="smoothScroll">Tentang Kami</a></li>
                          <li><a href="#appointment" class="smoothScroll">Pendaftaran</a></li>
                          <li><a href="#saran" class="smoothScroll">Kritik dan Saran</a></li>
-                         <li class="appointment-btn"><a href="<?php echo base_url()?>auth/login">Login</a></li>
+                         <li class="appointment-btn"><a href="<?php echo base_url() ?>auth/login">Login</a></li>
                     </ul>
                </div>
 
@@ -102,7 +102,7 @@ http://www.tooplate.com/view/2098-health
                               <div class="caption">
                                    <div class="col-md-offset-1 col-md-10">
                                         <h3>Percayakan Noda Kendaraan Bersama Kami</h3>
-                                        <h1>Hugo - Car Wash</h1>
+                                        <h1>GC - Car Wash</h1>
                                         <a href="#about" class="section-btn btn btn-default smoothScroll">Tentang
                                              Kami</a>
                                    </div>
@@ -113,7 +113,7 @@ http://www.tooplate.com/view/2098-health
                               <div class="caption">
                                    <div class="col-md-offset-1 col-md-10">
                                         <h3>Kinclongkan kendaraan anda hanya disini</h3>
-                                        <h1>Hugo - Car Wash</h1>
+                                        <h1>GC - Car Wash</h1>
                                         <a href="#appointment"
                                              class="section-btn btn btn-default btn-gray smoothScroll">Daftar
                                              Sekarang</a>
@@ -147,7 +147,7 @@ http://www.tooplate.com/view/2098-health
                          <div class="about-info">
                               <h2 class="wow fadeInUp" data-wow-delay="0.6s">Tentang Kami</h2>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                   <p>Hugo Carwash merupakan salah satu bidang usaha yang menawarkan jasa perawatan
+                                   <p>GC Carwash merupakan salah satu bidang usaha yang menawarkan jasa perawatan
                                         kendaraan berupa pencucian dan pembersihan kendaraan.</p>
                               </div>
                               <figure class="profile wow fadeInUp" data-wow-delay="1s">
@@ -178,16 +178,16 @@ http://www.tooplate.com/view/2098-health
      </section>
 
      <?php
-//      date_default_timezone_set('Asia/Jakarta');
+     //      date_default_timezone_set('Asia/Jakarta');
 // $tgl_pendaftaran = date("Y-m-d");
 // $queryy = mysql_query("SELECT no_antrian FROM pendaftaran WHERE tgl_pendaftaran = '$tgl_pendaftaran'");
 // $htg = mysql_num_rows($queryy);
      
-//      $next = $htg + 1;
+     //      $next = $htg + 1;
      
-//      $no_antrian = $tgl_pendaftaran . '/' . $next;
+     //      $no_antrian = $tgl_pendaftaran . '/' . $next;
      
-//      $hitung = mysql_query("SELECT max(id_customer) as id_terakhir from customer");
+     //      $hitung = mysql_query("SELECT max(id_customer) as id_terakhir from customer");
 // $cari = mysql_fetch_array($hitung);
 // $id_lanjut = $cari['id_terakhir'] + 1;
      
@@ -220,7 +220,7 @@ http://www.tooplate.com/view/2098-health
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="email">No. Handphone</label>
-                                        <input type="number" class="form-control" id="email" name="no_hp"
+                                        <input type="number" class="form-control" id="no_hp" name="no_hp"
                                              placeholder="No. Handphone Anda" required="">
                                    </div>
 
@@ -238,46 +238,41 @@ http://www.tooplate.com/view/2098-health
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="select">Type Mobil</label>
-                                        <?php
-                                        // $result2 = mysql_query("select * from type_mobil");
-// echo '<select name="type_mobil" class="form-control-rounded form-control" required>';
-// echo '<option>Pilih Type Mobil</option>';
-// while ($row2 = mysql_fetch_array($result2)) {
-//     echo '<option value="' . $row2['type_mobil'] . '">' . $row2['type_mobil'] . '</option>';
-// }
-// echo '</select>';
-                                        ?>
+                                        <select name="tipe" class="form-controler-rounded form-control">
+                                             <?php foreach ($type_mobil as $data): ?>
+                                                  <option value="<?= $data->id_type_mobil; ?>">
+                                                       <?= $data->type_mobil; ?>
+                                                  </option>
+                                             <?php endforeach; ?>
+                                        </select>
                                    </div>
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="email">No. Antrian</label>
                                         <input type="text" class="form-control-rounded form-control"
-                                             value="<?php //echo $next; ?>" required="" readonly name="next">
+                                             value="1" required="" readonly name="next">
                                         <input type="hidden" name="no_antrian" class="form-control-rounded form-control"
-                                             value="<?php //echo $no_antrian; ?>" required="" readonly>
+                                             value="1" required="" readonly>
                                    </div>
 
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="select">Jenis Cucian</label>
-                                        <?php
-                                        // $result = mysql_query("SELECT * FROM jenis_cucian");
-// $jsArray = "var prdName = new Array();\n";
-// echo '<select class="form-control" name="id_jenis_cucian" onchange="document.getElementById(\'txt2\').value = prdName[this.value]">';
-// echo '<option>Pilih Jenis Cucian</option>';
-// while ($row = mysql_fetch_array($result)) {
-//     echo '<option value="' . $row['id_jenis_cucian'] . '">' . $row['jenis_cucian'] . '</option>';
-//     $jsArray .= "prdName['" . $row['id_jenis_cucian'] . "'] = '" . addslashes($row['biaya']) . "';\n";
-// }
-// echo '</select>';
-                                        
-                                        ?>
+                                        <select name="jenis-cucian" id="" class="form-control" onchange="getTotal()">
+                                             <?php foreach ($jenis_cuci as $data): ?>
+                                                  <option value="<?= $data->id_jenis_cucian; ?>">
+                                                       <?= $data->jenis_cucian ." - ". $data->biaya; ?>
+                                                  </option>
+                                             <?php endforeach; ?>
+                                        </select>
                                    </div>
 
+                                   <?php date_default_timezone_set('Asia/Jakarta'); // Mengatur zona waktu ke Asia/Jakarta
+                                                  $today = date("Y-m-d"); ?>
                                    <div class="col-md-6 col-sm-6">
                                         <label for="email">Tanggal Pendaftaran</label>
-                                        <input type="date" class="form-control" id="email" name="tgl_pendaftaran"
-                                             value="<?php //echo $tgl_pendaftaran; ?>" readonly>
+                                        <input type="text" class="form-control" id="tgl_pendaftaran" name="tgl_pendaftaran"
+                                             value="<?= $today; ?>" readonly>
                                    </div>
 
                                    <div class="col-md-6 col-sm-6">
@@ -286,8 +281,13 @@ http://www.tooplate.com/view/2098-health
                                              min="08:00:00" max="18:00:00" required="">
                                    </div>
 
-                                   <input type="hidden" name="total_biaya" id="txt2" class="form-control" readonly=""
-                                        onkeyup="sum();" />
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="total_biaya">Total Biaya</label>
+                                        <input type="text" class="form-control" id="total_biaya" name="total_biaya"
+                                             placeholder="Total Biaya" readonly>
+                                   </div>
+                                   <!-- <input type="hidden" name="total_biaya" id="txt2" class="form-control" readonly=""
+                                        value="<?= $totalBiaya; ?>" /> -->
                                    <script type="text/javascript">
                                         <?php //echo $jsArray; ?>
                                    </script>
@@ -310,12 +310,11 @@ http://www.tooplate.com/view/2098-health
      <section id="saran">
           <div class="container">
                <div class="row">
-
-
-
                     <div class="col-md-12 col-sm-12">
                          <!-- CONTACT FORM HERE -->
-                         <form id="saran-form" role="form" method="post" action="pages/proses_saran.php">
+                         <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+                         <form id="saran-form" role="form" method="post"
+                              action="<?php echo base_url('index/createKritik') ?>">
 
                               <!-- SECTION TITLE -->
                               <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
@@ -343,19 +342,19 @@ http://www.tooplate.com/view/2098-health
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="email">Kebersihan</label>
-                                        <input type="number" class="form-control" id="email" name="kebersihan"
+                                        <input type="number" class="form-control" id="kebersihan" name="kebersihan"
                                              placeholder="Nilai Point Kebersihan" maxlength="3" required="">
                                    </div>
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="email">Keramahan</label>
-                                        <input type="number" class="form-control" id="email" name="keramahan"
+                                        <input type="number" class="form-control" id="keramahan" name="keramahan"
                                              placeholder="Nilai Point Keramahan" maxlength="3" required="">
                                    </div>
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="email">Ketelitian</label>
-                                        <input type="number" class="form-control" id="email" name="ketelitian"
+                                        <input type="number" class="form-control" id="ketelitian" name="ketelitian"
                                              placeholder="Nilai Point Ketelitian" maxlength="3" required="">
                                    </div>
 
@@ -428,14 +427,23 @@ http://www.tooplate.com/view/2098-health
      </footer>
 
      <!-- SCRIPTS -->
-     <script src="<?php echo base_url()?>assets/js/jquery.js"></script>
-     <script src="<?php echo base_url()?>assets/js/bootstrap.min.js"></script>
-     <script src="<?php echo base_url()?>assets/js/jquery.sticky.js"></script>
-     <script src="<?php echo base_url()?>assets/js/jquery.stellar.min.js"></script>
-     <script src="<?php echo base_url()?>assets/js/wow.min.js"></script>
-     <script src="<?php echo base_url()?>assets/js/smoothscroll.js"></script>
-     <script src="<?php echo base_url()?>assets/js/owl.carousel.min.js"></script>
-     <script src="<?php echo base_url()?>assets/js/custom.js"></script>
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+     <script src="<?php echo base_url() ?>assets/js/jquery.js"></script>
+     <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
+     <script src="<?php echo base_url() ?>assets/js/jquery.sticky.js"></script>
+     <script src="<?php echo base_url() ?>assets/js/jquery.stellar.min.js"></script>
+     <script src="<?php echo base_url() ?>assets/js/wow.min.js"></script>
+     <script src="<?php echo base_url() ?>assets/js/smoothscroll.js"></script>
+     <script src="<?php echo base_url() ?>assets/js/owl.carousel.min.js"></script>
+     <script src="<?php echo base_url() ?>assets/js/custom.js"></script>
+     <script>
+          $(document).ready(function () {
+               const flashData = $('.flash-data').data('flashdata');
+               if (flashData) {
+                    swal("Here's the title!", flashData);
+               }
+          });
+     </script>
 
 </body>
 

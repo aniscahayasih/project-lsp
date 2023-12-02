@@ -25,4 +25,9 @@ class UserModels extends CI_Model
 		$result = $this->db->get_where($table, ['id_user' => $id])->row();
 		return $result;
 	}
+
+	public function cekData($where = null)
+  {
+    return $this->db->get_where('user', $where);
+  }
 }

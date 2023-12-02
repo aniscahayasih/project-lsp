@@ -74,8 +74,14 @@
                                                 </form>
                                             </td>
                                             <td align="center">
+                                                    <?php
+                                                        if($data->status =='Lunas'){
+                                                    ?>
+                                                    Lunas
+                                                <?php } else { ?>
                                                 <a href="<?= base_url('admin/bayar_view/' . $data->id_pendaftaran) ?>" class="btn btn-success mb-3"> <i class="fa fa-fw fa-dollar" style="color: white"></i> <font color="white">Bayar</font>
                                                 </a>
+                                                <?php } ?>
                                             </td>
                                         </tr>
                                         <?php endforeach; ?>
