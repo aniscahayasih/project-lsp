@@ -258,7 +258,10 @@ http://www.tooplate.com/view/2098-health
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="select">Jenis Cucian</label>
-                                        <select name="jenis-cucian" id="" class="form-control" onchange="getTotal()">
+                                        <select name="jenis-cucian" id="jenisCucian" class="form-control" onchange="getTotal()">
+                                             <option value="">
+                                                  Pilih Jenis Cucian
+                                             </option>
                                              <?php foreach ($jenis_cuci as $data): ?>
                                                   <option value="<?= $data->id_jenis_cucian; ?>">
                                                        <?= $data->jenis_cucian ." - ". $data->biaya; ?>
@@ -443,6 +446,13 @@ http://www.tooplate.com/view/2098-health
                     swal("Here's the title!", flashData);
                }
           });
+          function getTotal() {
+			let total = document.getElementById("jenisCucian");
+			let total2 = total.options[total.selectedIndex].text
+			let getTotal = total2.split(" - ");
+               document.getElementById("total_biaya").value = getTotal[1];
+			console.log("total = " + getTotal[1]);
+		}
      </script>
 
 </body>
