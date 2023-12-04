@@ -203,7 +203,8 @@ http://www.tooplate.com/view/2098-health
 
                     <div class="col-md-12 col-sm-12">
                          <!-- CONTACT FORM HERE -->
-                         <form id="appointment-form" role="form" method="post" action="pages/proses_pendaftaran.php">
+                         <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+                         <form id="appointment-form" role="form" method="post" action="<?php echo base_url('index/createPendaftaran') ?>">
                               <input type="hidden" class="form-control" id="nama" name="id_customer"
                                    value="<?php //echo $id_lanjut; ?>">
                               <!-- SECTION TITLE -->
@@ -238,7 +239,7 @@ http://www.tooplate.com/view/2098-health
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="select">Type Mobil</label>
-                                        <select name="tipe" class="form-controler-rounded form-control">
+                                        <select name="type_mobil" class="form-controler-rounded form-control">
                                              <?php foreach ($type_mobil as $data): ?>
                                                   <option value="<?= $data->id_type_mobil; ?>">
                                                        <?= $data->type_mobil; ?>
@@ -258,7 +259,7 @@ http://www.tooplate.com/view/2098-health
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="select">Jenis Cucian</label>
-                                        <select name="jenis-cucian" id="jenisCucian" class="form-control" onchange="getTotal()">
+                                        <select name="jenis_cucian" id="jenisCucian" class="form-control" onchange="getTotal()">
                                              <option value="">
                                                   Pilih Jenis Cucian
                                              </option>
@@ -443,7 +444,7 @@ http://www.tooplate.com/view/2098-health
           $(document).ready(function () {
                const flashData = $('.flash-data').data('flashdata');
                if (flashData) {
-                    swal("Here's the title!", flashData);
+                    swal("Data Berhasil Ditambahkan!", flashData);
                }
           });
           function getTotal() {

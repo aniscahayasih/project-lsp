@@ -21,4 +21,10 @@ class PendaftaranModels extends CI_Model
 		
 		return $result;
 	}
+
+	public function insert($table, $data)
+	{
+		$result = $this->db->insert($table, $data);
+		return $result;
+	}
 }

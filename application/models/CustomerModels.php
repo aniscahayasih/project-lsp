@@ -1,6 +1,6 @@
 <?php 
 defined('BASEPATH') or exit('No direct script access allowed');
-class KritikModels extends CI_Model
+class CustomerModels extends CI_Model
 {
   public function insert($table, $data)
 	{
