@@ -324,4 +324,51 @@ class Admin extends CI_Controller
 		$this->session->set_flashdata('message', '<div class="alert alert-success">Record has been deleted successfully.</div>');
 		redirect(base_url('admin/jenis_cucian'));
 	}
+  public function laporan()
+  {
+
+    // var_dump($_GET);exit;
+    if ($_GET){
+      $tgl_awal = $_GET['tgl_awal'];
+      $tgl_akhir = $_GET['tgl_akhir'];
+      $this->db->select('*');
+      $this->db->from('transaksi');
+      $this->db->join('pendaftaran', 'transaksi.id_pendaftaran = pendaftaran.id_pendaftaran');
+      $this->db->join('jenis_cucian', 'pendaftaran.id_jenis_cucian = jenis_cucian.id_jenis_cucian');
+      $this->db->join('customer', 'pendaftaran.id_customer = customer.id_customer');
+      $this->db->where("tanggal BETWEEN '$tgl_awal' AND '$tgl_akhir'");
+      $this->db->order_by('transaksi.id_transaksi', 'desc');
+
+      $query = $this->db->get();
+      $data['laporan'] = $query->result();
+    } else {
+      $data['laporan'] = 0;
+    }
+
+    $this->load->view("template/head",$data);
+    $this->load->view("template/header",$data);
+    $this->load->view("template/sidebar",$data);
+    $this->load->view("content/laporan",$data);
+    $this->load->view("template/footer",$data);
+  }
+  public function pdfview()
+  {
+
+    $tgl_awal = $_GET['tgl_awal'];
+      $tgl_akhir = $_GET['tgl_akhir'];
+      $this->db->select('*');
+      $this->db->from('transaksi');
+      $this->db->join('pendaftaran', 'transaksi.id_pendaftaran = pendaftaran.id_pendaftaran');
+      $this->db->join('jenis_cucian', 'pendaftaran.id_jenis_cucian = jenis_cucian.id_jenis_cucian');
+      $this->db->join('customer', 'pendaftaran.id_customer = customer.id_customer');
+      $this->db->where("tanggal BETWEEN '$tgl_awal' AND '$tgl_akhir'");
+      $this->db->order_by('transaksi.id_transaksi', 'desc');
+
+      $query = $this->db->get();
+      $data['laporan'] = $query->result();
+		$this->load->library('pdf');
+		$this->pdf->setPaper('A4', 'potrait');
+		$this->pdf->filename = "laporan-data-siswa.pdf";
+		$this->pdf->load_view('export/laporan', $data);
+  }
 }
