@@ -19,7 +19,7 @@
                         <a href="<?php echo base_url()?>admin/customer"> <i class="menu-icon ti-id-badge"></i>Customer </a>
                     </li>
                     <li>
-                        <a href="index.php?p=laporan"> <i class="menu-icon ti-printer"></i>Laporan </a>
+                        <a href="<?php echo base_url()?>admin/laporan"> <i class="menu-icon ti-printer"></i>Laporan </a>
                     </li>
 
                     <li class="menu-title">Extra</li><!-- /.menu-title -->
