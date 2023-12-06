@@ -4,13 +4,6 @@
 <head>
 
      <title>GC - Car Wash</title>
-     <!--
-
-Template 2098 Health
-
-http://www.tooplate.com/view/2098-health
-
--->
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="description" content="">
@@ -177,30 +170,10 @@ http://www.tooplate.com/view/2098-health
           </div>
      </section>
 
-     <?php
-     //      date_default_timezone_set('Asia/Jakarta');
-// $tgl_pendaftaran = date("Y-m-d");
-// $queryy = mysql_query("SELECT no_antrian FROM pendaftaran WHERE tgl_pendaftaran = '$tgl_pendaftaran'");
-// $htg = mysql_num_rows($queryy);
-     
-     //      $next = $htg + 1;
-     
-     //      $no_antrian = $tgl_pendaftaran . '/' . $next;
-     
-     //      $hitung = mysql_query("SELECT max(id_customer) as id_terakhir from customer");
-// $cari = mysql_fetch_array($hitung);
-// $id_lanjut = $cari['id_terakhir'] + 1;
-     
-     ?>
-
-
      <!-- MAKE AN APPOINTMENT -->
      <section id="appointment" data-stellar-background-ratio="3">
           <div class="container">
                <div class="row">
-
-
-
                     <div class="col-md-12 col-sm-12">
                          <!-- CONTACT FORM HERE -->
                          <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
@@ -407,25 +380,6 @@ http://www.tooplate.com/view/2098-health
                               </div>
                          </div>
                     </div>
-
-                    <!-- <div class="col-md-12 col-sm-12 border-top">
-                         <div class="col-md-6 col-sm-6">
-                              <div class="copyright-text">
-                                   <p>Copyright &copy; 2020 <a href="www.kampus-programmer.com/"><b> Kampus
-                                                  Programmer</b></a> | Repost by <a href='https://stokcoding.com/'
-                                             title='StokCoding.com' target='_blank'>StokCoding.com</a>
-                                   </p>
-                              </div>
-                         </div>
-
-                         <div class="col-md-2 col-sm-2 text-align-center">
-                              <div class="angle-up-btn">
-                                   <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i
-                                             class="fa fa-angle-up"></i></a>
-                              </div>
-                         </div>
-                    </div> -->
-
                </div>
           </div>
      </footer>
