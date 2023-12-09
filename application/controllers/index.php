@@ -25,6 +25,9 @@ class Index extends CI_Controller {
     $jenis_cuci = $this->db->get()->result();
 		$type_mobil = $this->db->select("*")->from('type_mobil')->get()->result();
 
+		$latest_no_antrian = $this->PendaftaranModels->getLatestNoAntrian();
+
+		$data['noAntrian'] = $latest_no_antrian;
 		$data["jenis_cuci"] = $jenis_cuci;
 		$data["type_mobil"] = $type_mobil;
 

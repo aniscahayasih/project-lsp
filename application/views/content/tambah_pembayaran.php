@@ -38,7 +38,7 @@
 							<input type="hidden" id="text-input" name="id_pendaftaran" class="form-control"
 								value="<?= $data->id_pendaftaran;?>">
 							<input type="hidden" id="text-input" name="id_user" class="form-control"
-								value="<?= $this->session->userdata('id') ?>">
+								value="<?= $this->session->userdata('id_user') ?>">
 							<input type="hidden" id="text-input" name="status" class="form-control" value="Lunas">
 
 							<div class="row form-group">

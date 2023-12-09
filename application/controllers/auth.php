@@ -55,8 +55,7 @@ class Auth extends CI_Controller {
                 if (password_verify($password, $user['password'])) {
                     $data = [
                         'username' => $user['username'],
-                        'email' => $user['email'],
-                        'id' => $user['email'],
+                        'id_user' => $user['id_user'],
                     ];
 
                     $this->session->set_userdata($data);
@@ -78,7 +77,7 @@ class Auth extends CI_Controller {
     
     public function logout()
     {
-        $this->session->unset_userdata('email');
+        $this->session->unset_userdata('username');
 
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Anda telah logout!!</div>');
         redirect('');

@@ -177,7 +177,8 @@
                     <div class="col-md-12 col-sm-12">
                          <!-- CONTACT FORM HERE -->
                          <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
-                         <form id="appointment-form" role="form" method="post" action="<?php echo base_url('index/createPendaftaran') ?>">
+                         <form id="appointment-form" role="form" method="post"
+                              action="<?php echo base_url('index/createPendaftaran') ?>">
                               <input type="hidden" class="form-control" id="nama" name="id_customer"
                                    value="<?php //echo $id_lanjut; ?>">
                               <!-- SECTION TITLE -->
@@ -223,33 +224,34 @@
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="email">No. Antrian</label>
-                                        <input type="text" class="form-control-rounded form-control"
-                                             value="1" required="" readonly name="next">
+                                        <input type="text" class="form-control-rounded form-control" value="<?= $noAntrian; ?>"
+                                             required="" readonly name="next">
                                         <input type="hidden" name="no_antrian" class="form-control-rounded form-control"
-                                             value="1" required="" readonly>
+                                             value="<?= $noAntrian; ?>" required="" readonly>
                                    </div>
 
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="select">Jenis Cucian</label>
-                                        <select name="jenis_cucian" id="jenisCucian" class="form-control" onchange="getTotal()">
+                                        <select name="jenis_cucian" id="jenisCucian" class="form-control"
+                                             onchange="getTotal()">
                                              <option value="">
                                                   Pilih Jenis Cucian
                                              </option>
                                              <?php foreach ($jenis_cuci as $data): ?>
                                                   <option value="<?= $data->id_jenis_cucian; ?>">
-                                                       <?= $data->jenis_cucian ." - ". $data->biaya; ?>
+                                                       <?= $data->jenis_cucian . " - " . $data->biaya; ?>
                                                   </option>
                                              <?php endforeach; ?>
                                         </select>
                                    </div>
 
                                    <?php date_default_timezone_set('Asia/Jakarta'); // Mengatur zona waktu ke Asia/Jakarta
-                                                  $today = date("Y-m-d"); ?>
+                                   $today = date("Y-m-d"); ?>
                                    <div class="col-md-6 col-sm-6">
                                         <label for="email">Tanggal Pendaftaran</label>
-                                        <input type="text" class="form-control" id="tgl_pendaftaran" name="tgl_pendaftaran"
-                                             value="<?= $today; ?>" readonly>
+                                        <input type="text" class="form-control" id="tgl_pendaftaran"
+                                             name="tgl_pendaftaran" value="<?= $today; ?>" readonly>
                                    </div>
 
                                    <div class="col-md-6 col-sm-6">
@@ -402,12 +404,12 @@
                }
           });
           function getTotal() {
-			let total = document.getElementById("jenisCucian");
-			let total2 = total.options[total.selectedIndex].text
-			let getTotal = total2.split(" - ");
+               let total = document.getElementById("jenisCucian");
+               let total2 = total.options[total.selectedIndex].text
+               let getTotal = total2.split(" - ");
                document.getElementById("total_biaya").value = getTotal[1];
-			console.log("total = " + getTotal[1]);
-		}
+               console.log("total = " + getTotal[1]);
+          }
      </script>
 
 </body>

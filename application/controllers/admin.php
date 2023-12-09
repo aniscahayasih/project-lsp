@@ -11,6 +11,7 @@ class Admin extends CI_Controller
   {
     parent::__construct();
     $this->load->helper('url');
+    cek_login();
   }
   public function index()
   {
