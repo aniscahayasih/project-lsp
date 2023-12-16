@@ -22,11 +22,6 @@ class Auth extends CI_Controller {
 
      public function index()
     {
-        //jika statusnya sudah login, maka tidak bisa mengakses halaman login alias dikembalikan ke tampilan user
-        // if ($this->session->userdata('email')) {
-        //     redirect('admin');
-        // }
-
         $this->form_validation->set_rules('username', 'Username', 'required|trim', [
             'required' => 'Username Harus diisi !!',
         ]);

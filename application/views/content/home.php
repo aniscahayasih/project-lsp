@@ -32,7 +32,7 @@
                             </div>
                             <div class="card-body" align="center">
                                 <br><br><br><br><br>
-                                Selamat Datang <b><u>Admin[Statis]</u></b> Di Halaman Admin Panel Hugo - Car Wash
+                                Selamat Datang <b><u><?php echo $this->session->userdata('username'); ?></u></b> Di Halaman Admin Panel Hugo - Car Wash
                                 <br>
                                 <br><br><br><br>
                             </div>

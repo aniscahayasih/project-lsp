@@ -29,6 +29,4 @@
           $('#bootstrap-data-table-export').DataTable();
       } );
   </script>
-
-
 </body>

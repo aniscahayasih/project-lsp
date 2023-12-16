@@ -86,7 +86,7 @@ class Index extends CI_Controller {
 
 		$this->PendaftaranModels->insert('pendaftaran', $data_pendaftaran);
 
-		$this->session->set_flashdata('flash', 'Ditambahkan');
+		$this->session->set_flashdata('flash', 'Nomer Antrian anda adalah ' . $data['nomor_antrian']);
 
 		redirect(base_url('/'));
 
