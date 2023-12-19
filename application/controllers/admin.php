@@ -167,7 +167,6 @@ class Admin extends CI_Controller
     $data['nama'] = $this->input->post('nama');
 		$data['alamat'] = $this->input->post('alamat');
     $data['hp'] = $this->input->post('hp');
-    $data['status'] = 1;
     $data['username'] = $this->input->post('username');
     $data['password'] = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
 

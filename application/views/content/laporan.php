@@ -146,7 +146,7 @@ error_reporting(0);
 		let tgl_awal = document.getElementById("tgl_awal").value;
 		let tgl_akhir = document.getElementById("tgl_akhir").value;
 
-		let url = "http://localhost/carwash/admin/laporan?tgl_awal=" + tgl_awal + "&tgl_akhir=" + tgl_akhir
+		let url = "http://localhost/sims-carwash/admin/laporan?tgl_awal=" + tgl_awal + "&tgl_akhir=" + tgl_akhir
 
 		window.location = url;
 
@@ -155,7 +155,7 @@ error_reporting(0);
 		let tgl_awal = document.getElementById("tgl_awal").value;
 		let tgl_akhir = document.getElementById("tgl_akhir").value;
 
-		let url = "http://localhost/carwash/admin/pdfview?tgl_awal=" + tgl_awal + "&tgl_akhir=" + tgl_akhir
+		let url = "http://localhost/sims-carwash/admin/pdfview?tgl_awal=" + tgl_awal + "&tgl_akhir=" + tgl_akhir
 
 		window.location = url;
 	}

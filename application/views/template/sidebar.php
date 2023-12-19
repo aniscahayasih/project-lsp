@@ -10,33 +10,41 @@
                         <a href="./"><i class="menu-icon fa fa-home"></i>Beranda </a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url()?>admin/pendaftaran"> <i class="menu-icon ti-clipboard"></i>Pendaftaran </a>
+                        <a href="<?php echo base_url() ?>admin/pendaftaran"> <i
+                                class="menu-icon ti-clipboard"></i>Pendaftaran </a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url()?>admin/transaksi"> <i class="menu-icon ti-receipt"></i>Transaksi </a>
+                        <a href="<?php echo base_url() ?>admin/transaksi"> <i class="menu-icon ti-receipt"></i>Transaksi
+                        </a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url()?>admin/customer"> <i class="menu-icon ti-id-badge"></i>Customer </a>
+                        <a href="<?php echo base_url() ?>admin/customer"> <i class="menu-icon ti-id-badge"></i>Customer
+                        </a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url()?>admin/laporan"> <i class="menu-icon ti-printer"></i>Laporan </a>
+                        <a href="<?php echo base_url() ?>admin/laporan"> <i class="menu-icon ti-printer"></i>Laporan </a>
                     </li>
 
                     <li class="menu-title">Extra</li><!-- /.menu-title -->
+                    <?php if ($this->session->userdata('username') == 'admin'): ?>
+                        <li>
+                            <a href="<?php echo base_url() ?>admin/user"> <i class="menu-icon ti-user"></i>User </a>
+                        </li>
+                    <?php endif; ?>
+
                     <li>
-                        <a href="<?php echo base_url()?>admin/user"> <i class="menu-icon ti-user"></i>User </a>
+                        <a href="<?php echo base_url() ?>admin/type_mobil"> <i class="menu-icon ti-list"></i>Type Mobil
+                        </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo base_url()?>admin/type_mobil"> <i class="menu-icon ti-list"></i>Type Mobil </a>
+                        <a href="<?php echo base_url() ?>admin/jenis_cucian"> <i class="menu-icon ti-list"></i>Jenis
+                            Cucian </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo base_url()?>admin/jenis_cucian"> <i class="menu-icon ti-list"></i>Jenis Cucian </a>
-                    </li>
-
-                    <li>
-                        <a href="<?php echo base_url()?>admin/saran"> <i class="menu-icon ti-list"></i>Kritik dan Saran </a>
+                        <a href="<?php echo base_url() ?>admin/saran"> <i class="menu-icon ti-list"></i>Kritik dan Saran
+                        </a>
                     </li>
 
                 </ul>
